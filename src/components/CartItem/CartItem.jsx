@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Context } from '../context/Provider';
 import formateCurrency from '../../utils/formateCurrency';
 import { toast, Bounce } from 'react-toastify';
@@ -43,7 +43,7 @@ export const CartItem = ({ data }) => {
   };
 
   return (
-    <div className="flex gap-2 items-center font-bold mb-8 border-b-2">
+    <div className="flex gap-2 items-center font-bold mb-8">
         <div className="flex mt-5 items-center justify-between w-full">
           <div className='flex flex-col '>
             <h1 className='text-2xl'>{name}</h1>

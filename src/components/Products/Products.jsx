@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+/* eslint-disable react/prop-types */
+import  { useContext } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import formateCurrency from "../../utils/formateCurrency";
 import ImageErro from "../../assets/image-square-xmark-svgrepo-com.svg";

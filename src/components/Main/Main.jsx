@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Sidebar } from '../Nav/Sidebar';
 import { Provider } from '../context/Provider';
-import { Header } from '../Header/Header';
 import { Home } from '../../Router/Home';
 import { Pizzas } from '../../Router/Pizzas';
 import { Hamburgueres } from '../../Router/Hamburgueres';
@@ -18,8 +16,7 @@ export const Main = () => {
     <main className='flex flex-col justify-center items-center'>
       <Provider>
         <Router>
-          <Header />
-          <Sidebar />
+        
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/pizza' element={<Pizzas />} />
