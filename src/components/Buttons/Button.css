@@ -1,0 +1,42 @@
+.button{
+    border: none;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transform: translateY(0, 0);
+}
+
+.select{
+    padding: 1rem;
+    border-radius: 50%;
+    transform: translateY(-60%);
+    transition: all .4s ease-in-out;
+    animation: bg 400ms forwards  ease-in-out;
+}
+
+@keyframes bg {
+    100%{
+        border-radius: 50%;
+        background-color: #fff;       
+    }
+}
+
+.home, 
+.pizza, 
+.hamburguer,
+.hotdog{
+    color: red;
+    font-size: 2rem;
+}
+
+.confirm{
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+}

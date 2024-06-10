@@ -1,0 +1,43 @@
+[
+    {
+      "id": 11,
+      "name": "Cheese Burger Duplo",
+      "size": "grande",
+      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "price": 20.9,
+      "type": "hamburguer",
+      "image": "1717300670748.png",
+      "imageUrl": "http://localhost:4004/uploads/1717300670748.png"
+    },
+    {
+      "id": 12,
+      "name": "X-Tudo",
+      "size": "grande",
+      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "price": 12.9,
+      "type": "hamburguer",
+      "image": "1717301125123.png",
+      "imageUrl": "http://localhost:4004/uploads/1717301125123.png"
+    },
+    {
+      "id": 13,
+      "name": "Catupiry",
+      "size": "grande",
+      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "price": 26.9,
+      "type": "pizza",
+      "image": "1717339848649.jpeg",
+      "imageUrl": "http://localhost:4004/uploads/1717339848649.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Hotdog - Tradicional",
+      "size": "grande",
+      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "price": 12.5,
+      "type": "hotdog",
+      "image": "1717452461108.jpeg",
+      "imageUrl": "http://localhost:4004/uploads/1717452461108.jpeg"
+    }
+  ]
+  

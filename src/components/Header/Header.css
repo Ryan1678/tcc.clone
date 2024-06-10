@@ -1,0 +1,46 @@
+header{
+    height: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: url("../../assets/bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+header > img{
+    border-radius: 100%;
+    width: 108px;
+    height: 108px;
+}
+
+header > h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+header > p {
+    margin-bottom: 1rem;
+    font-weight: 300;
+
+}
+
+header span{
+    border-radius: 6px;
+    background-color: rgb(25, 150, 25);
+    padding: .6rem .8rem;
+}
+
+
+header.open {
+  background-color: green;
+  color: white;
+}
+
+header.closed {
+  background-color: red;
+  color: white;
+}

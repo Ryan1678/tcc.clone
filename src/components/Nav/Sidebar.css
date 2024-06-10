@@ -1,0 +1,15 @@
+nav{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: #131010;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    transition: all .6s ease-in-out;
+    transform: translate(0%, 0);
+    z-index: 2;
+}
