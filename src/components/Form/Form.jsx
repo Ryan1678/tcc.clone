@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 export const Form = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [address, setAddress] = useState("");
-  const { cartItems, loading, setLoading } = useContext(Context);
+  const { cartItems, loading, setLoading, isOpen } = useContext(Context);
 
   const notifySuccess = () => toast.success('Pedido enviado!', {
     position: "top-left",
@@ -60,6 +60,11 @@ export const Form = () => {
   };
 
   const onSubmit = async (data) => {
+    if(!isOpen){
+      notifyError('Ops! O restaurante está fechado');
+      return;
+    }
+
     if (cartItems.length === 0) {
       notifyError("Carrinho está vazio!");
       return;

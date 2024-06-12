@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import  { useContext, useEffect } from 'react';
 import Logo from '../../assets/hamb-1.png';
 import './Header.css';
 import { Context } from '../context/Provider';
@@ -12,21 +12,25 @@ export const Header = () => {
     const checkRestaurantOpen = () => {
       const now = new Date();
       const hours = now.getHours();
+      console.log("Horário atual:", hours); // Adiciona um log para verificar o horário atual
       if (hours >= 18 && hours <= 22) {
         setIsOpen(true);
+        console.log("Restaurante aberto!");
       } else {
         setIsOpen(false);
+        console.log("Restaurante fechado!");
       }
     };
-
+  
     // Check immediately on mount
     checkRestaurantOpen();
-
+  
     // Check every minute
     const intervalId = setInterval(checkRestaurantOpen, 60000);
-
+  
     return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, []);
+  
 
   return (
     
