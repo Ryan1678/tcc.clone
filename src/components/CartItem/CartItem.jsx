@@ -3,6 +3,7 @@ import { Context } from '../context/Provider';
 import formateCurrency from '../../utils/formateCurrency';
 import { toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 export const CartItem = ({ data }) => {
   const { name, qualify, imageUrl } = data;
   const { cartItems, setCartItems } = useContext(Context);

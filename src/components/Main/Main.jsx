@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Provider } from '../context/Provider';
 import { Home } from '../../Router/Home';
 import { Pizzas } from '../../Router/Pizzas';
@@ -15,8 +15,7 @@ export const Main = () => {
   return (
     <main className='flex flex-col justify-center items-center'>
       <Provider>
-        <Router>
-        
+
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/pizza' element={<Pizzas />} />
@@ -24,7 +23,6 @@ export const Main = () => {
             <Route path='/hotdog' element={<Hotdogs />} />
             <Route path='/comfirm/verify' element={<Confirm />} />
           </Routes>
-        </Router>
         <ToastContainer
           position="bottom-left"
           autoClose={5000}
