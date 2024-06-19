@@ -60,5 +60,5 @@ export const Products = ({ data }) => {
 };
 
 Products.propTypes = {
-  data: PropTypes.string.isRequired
+  data: PropTypes.object.isRequired
 }

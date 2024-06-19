@@ -33,7 +33,7 @@ export const Provider = ({ children }) => {
     loading,setLoading,
     isOpen,setIsOpen,
     cartItems,setCartItems,
-    isCartVisible, setIsCartVisible
+    isCartVisible, setIsCartVisible,
   };
 
   return (
@@ -44,5 +44,5 @@ export const Provider = ({ children }) => {
 };
 
 Provider.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.array.isRequired
 }

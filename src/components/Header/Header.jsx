@@ -13,9 +13,9 @@ export const Header = () => {
       
       const now = new Date();
       const hours = now.getHours();
-
+      console.log(hours)
       if (hours >= 18 && hours <= 22) {
-        setIsOpen(!true);
+        setIsOpen(!false);
 
       } 
     };

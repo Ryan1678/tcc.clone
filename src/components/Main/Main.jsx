@@ -7,6 +7,7 @@ import { Hotdogs } from '../../Pages/Hotdogs';
 import { ToastContainer, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Confirm } from '../../Pages/Form';
+import { Error } from '../../Pages/Error';
 
 export const Main = () => {
 
@@ -15,13 +16,13 @@ export const Main = () => {
   return (
     <main className='flex flex-col justify-center items-center'>
       <Provider>
-
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/pizza' element={<Pizzas />} />
             <Route path='/hamburguer' element={<Hamburgueres />} />
             <Route path='/hotdog' element={<Hotdogs />} />
             <Route path='/formulario' element={<Confirm />} />
+            <Route path='*' element={<Error/>}/>
           </Routes>
         <ToastContainer
           position="bottom-left"

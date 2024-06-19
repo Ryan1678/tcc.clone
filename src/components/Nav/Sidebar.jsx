@@ -1,4 +1,4 @@
-import { Button } from "../Buttons/Button"
+import { NavButtons } from "../NavButtons/NavButtons"
 import { CiPizza } from "react-icons/ci";
 import { CiHotdog } from "react-icons/ci";
 import { FaHamburger } from "react-icons/fa";
@@ -12,21 +12,21 @@ export const Sidebar = () => {
    
   return (
     <nav>
-          <Button link={'/'} className={`${select === '' ? 'select' : ''} home`} title={''}>
+          <NavButtons link={'/'} className={`${select === '' ? 'select' : ''} home`} title={''}>
                <FaHome/> 
-          </Button>
+          </NavButtons>
 
-          <Button link={'/pizza'} className={`${select === 'pizza' ? 'select' : ''} pizza`} title={'pizza'}>
+          <NavButtons link={'/pizza'} className={`${select === 'pizza' ? 'select' : ''} pizza`} title={'pizza'}>
                <CiPizza/> 
-          </Button>
+          </NavButtons>
 
-          <Button link={'/hotdog'} className={`${select === 'hotdog' ? 'select' : ''} hotdog`} title={'hotdog'}>
+          <NavButtons link={'/hotdog'} className={`${select === 'hotdog' ? 'select' : ''} hotdog`} title={'hotdog'}>
                <CiHotdog/> 
-          </Button>
+          </NavButtons>
 
-          <Button link={'/hamburguer'} className={`${select === 'hamburguer' ? 'select' : ''} hamburguer` } title={'hamburguer'}>
+          <NavButtons link={'/hamburguer'} className={`${select === 'hamburguer' ? 'select' : ''} hamburguer` } title={'hamburguer'}>
                <FaHamburger/>
-          </Button>
+          </NavButtons>
 
     </nav>
   )

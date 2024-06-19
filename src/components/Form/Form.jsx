@@ -4,6 +4,8 @@ import { toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Context } from "../context/Provider";
 import Loading from "../Loading/Loading";
+import { CiLogout } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export const Form = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -118,7 +120,13 @@ export const Form = () => {
   return (
     <>
       {loading ? (<Loading/>) : (
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full gap-4 mt-5 mb-32 px-4">
+        <div className="w-full">
+          <div className="bg-white w-full text-red-600 py-2 px-2 text-4xl">
+           <Link to={'/'}>
+              <CiLogout/>
+           </Link>
+          </div>
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full gap-4 mt-5 mb-1 px-4">
             <h1 className="text-center text-3xl font-bold">Enviar seu <span className="text-red-600">pedido</span></h1>
             <input
               {...register("name", { required: true })}
@@ -142,7 +150,7 @@ export const Form = () => {
             />
             {errors.email && <span className="text-red-600">Email inválido!</span>}
             <input
-              type="text"
+              type="number"
               {...register("cep", { required: true, pattern: /^[0-9]{8}$/ })}
               placeholder="Cep"
               className="bg-white-200 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
@@ -169,7 +177,9 @@ export const Form = () => {
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
             <button className="border py-3 bg-green-500 text-white font-bold text-2xl">Fazer pedido</button>
-            </form>
+          </form>
+        </div>
+           
       )}
     </>
 
