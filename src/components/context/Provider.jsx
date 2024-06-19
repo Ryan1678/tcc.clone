@@ -1,6 +1,6 @@
 import  { useState, createContext, useEffect } from "react";
-import productsData from "../../json/fetchProducts.json"; // Certifique-se de ajustar o caminho para o arquivo JSON
-
+import productsData from "../../json/fetchProducts.json"; 
+import PropTypes from 'prop-types';
 export const Context = createContext();
 
 export const Provider = ({ children }) => {
@@ -9,11 +9,11 @@ export const Provider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(null);
   const [cartItems, setCartItems] = useState([]);
-  const [isCartVisible, setIsCartVisible] = useState(null)
+  const [isCartVisible, setIsCartVisible] = useState(null);
+
   const loadProducts = async () => {
     setLoading(true);
     try {
-      // Simulando o fetch de dados
       const products = productsData;
       setProducts(products);
     } catch (error) {
@@ -42,3 +42,7 @@ export const Provider = ({ children }) => {
     </Context.Provider>
   );
 };
+
+Provider.propTypes = {
+  children: PropTypes.string.isRequired
+}

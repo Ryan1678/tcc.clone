@@ -11,3 +11,12 @@
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+::-webkit-scrollbar {
+    width: 0px;  
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000; 
+    border-radius: 20px;     
+  }

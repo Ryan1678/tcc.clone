@@ -15,11 +15,9 @@ export const Header = () => {
       const hours = now.getHours();
 
       if (hours >= 18 && hours <= 22) {
-        setIsOpen(true);
+        setIsOpen(!true);
 
-      } else {
-        setIsOpen(false);
-      }
+      } 
     };
   
     checkRestaurantOpen();

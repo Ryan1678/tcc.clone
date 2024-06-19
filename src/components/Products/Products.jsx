@@ -1,14 +1,13 @@
-/* eslint-disable react/prop-types */
 import  { useContext } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import formateCurrency from "../../utils/formateCurrency";
-import ImageErro from "../../assets/image-square-xmark-svgrepo-com.svg";
 import { Context } from "../context/Provider";
 import { toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 
 export const Products = ({ data }) => {
-  const { name, price, description, imageUrl } = data;
+  const { name, price, description, imageUrl, image } = data;
   const { cartItems, setCartItems } = useContext(Context);
 
   const notify = () => toast.success('Produto adicionado ao carrinho!', {
@@ -43,19 +42,23 @@ export const Products = ({ data }) => {
 
   return (
     <div className="flex items-center gap-2 w-full">
-      <img className="w-28 h-28 rounded hover:scale-110 hover:rotate-6 duration-200" src={imageUrl ? imageUrl : ImageErro} alt={name} />
+      <img className="w-28 h-28 rounded hover:scale-110 hover:rotate-6 duration-200" src={imageUrl ? imageUrl : image} alt={name} />
 
-      <div>
+      <div className=' relative'>
         <h3 className="font-bold mb-1">{name}</h3>
         <p className="text-xs mb-2">{description}</p>
         <div className="flex justify-between items-center">
           <span className="font-bold">{formateCurrency(price, 'BRL')}</span>
 
-          <button className="text-2xl bg-black/25 py-1 px-2 rounded-md" onClick={handleAddCart}>
-            <FaShoppingCart />
+          <button className="absolute right-0 text-2xl bg-black py-1 px-2 rounded-md hover:bg-red-600 hover:scale-110" onClick={handleAddCart}>
+            <FaShoppingCart className='text-white '/>
           </button>
         </div>
       </div>
     </div>
   );
 };
+
+Products.propTypes = {
+  data: PropTypes.string.isRequired
+}

@@ -34,6 +34,15 @@ export const Form = () => {
     transition: Bounce,
   });
 
+  const handlePhoneChange = (e) => {
+    const phone = e.target.value.replace(/\D/g, '');
+
+    if(phone.length > 12){
+      e.target.value = phone.slice(0,11);
+      return;
+    }
+  }
+
   const handleCepChange = async (e) => {
     const cep = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
     if (cep.length > 8) {
@@ -119,9 +128,10 @@ export const Form = () => {
             {errors.name && <span className="text-red-600">O nome não pode estar vazio</span>}
             <input
               type="tel"
-              {...register("phone", { required: true, pattern: /^[0-9]{10,11}$/ })}
+              {...register("phone", { required: true, pattern: /^[0-9]{11}$/ })}
               placeholder="Telefone"
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
+              onChange={handlePhoneChange}
             />
             {errors.phone && <span className="text-red-600">O número é inválido!</span>}
             <input

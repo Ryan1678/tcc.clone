@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { Provider } from '../context/Provider';
-import { Home } from '../../Router/Home';
-import { Pizzas } from '../../Router/Pizzas';
-import { Hamburgueres } from '../../Router/Hamburgueres';
-import { Hotdogs } from '../../Router/Hotdogs';
+import { Home } from '../../Pages/Home';
+import { Pizzas } from '../../Pages/Pizzas';
+import { Hamburgueres } from '../../Pages/Hamburgueres';
+import { Hotdogs } from '../../Pages/Hotdogs';
 import { ToastContainer, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Confirm } from '../../Router/Confirm';
+import { Confirm } from '../../Pages/Form';
 
 export const Main = () => {
 
@@ -21,7 +21,7 @@ export const Main = () => {
             <Route path='/pizza' element={<Pizzas />} />
             <Route path='/hamburguer' element={<Hamburgueres />} />
             <Route path='/hotdog' element={<Hotdogs />} />
-            <Route path='/comfirm/verify' element={<Confirm />} />
+            <Route path='/formulario' element={<Confirm />} />
           </Routes>
         <ToastContainer
           position="bottom-left"

@@ -17,13 +17,13 @@ export const Menu = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className='menu mb-10'>
+        <div className='menu mb-10 w-full'>
           <h2 className='text-center font-bold mb-5 mt-5 text-2xl'>{select ? `Cardapio de ${select}` : 'Nossos melhores lanches'}</h2>
-          <main className='px-2 flex flex-col gap-4 mb-20'>
+          <div className='px-4 flex-col gap-10 mb-20 grid grid-cols-1 md:grid-cols-2 w-full'>
             {filteredProducts.map((product) => (
               <Products key={product.id} data={product} />
             ))}
-          </main>
+          </div>
         </div>
       )}
     </>

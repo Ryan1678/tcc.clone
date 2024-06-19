@@ -14,9 +14,8 @@ export const CartButton = () => {
         className="cart__button"
         onClick={() => setIsCartVisible(!isCartVisible)}
         >
-            <AiOutlineShoppingCart/>
-
-            {cartItems.length > 0 && <span className="cart-status">{cartItems.length}</span>}
+            <AiOutlineShoppingCart />
+            {cartItems.length > 0 && <span className="cart-status absolute">{cartItems.length}</span>}
         </button>
     )
 }
