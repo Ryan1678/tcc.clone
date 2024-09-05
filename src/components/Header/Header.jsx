@@ -14,7 +14,7 @@ export const Header = () => {
       const now = new Date();
       const hours = now.getHours();
       console.log(hours)
-      if (hours >= 18 && hours <= 22) {
+      if (hours >= 7 && hours <= 21) {
         setIsOpen(!false);
 
       } 
@@ -24,7 +24,7 @@ export const Header = () => {
   
     const intervalId = setInterval(checkRestaurantOpen, 60000);
   
-    return () => clearInterval(intervalId); // Cleanup interval on unmount
+    return () => clearInterval(intervalId); 
   }, []);
   
 
@@ -33,11 +33,11 @@ export const Header = () => {
     <header className='relative'>
       
       <img src={Logo} alt="Logo" />
-      <h2>Muchies</h2>
+      <h2>Lanchonete Escolar</h2>
       
-      <p>Samambaia-Sul, quadra 302, df</p>
+      <p>ITB Brasilío Flores de Azevedo</p>
       <span className={`restaurant ${isOpen ? 'open' : 'closed'}`}>
-        Seg á Dom - 18:00 as 22:00
+        Seg á Sex - 07:00 as 22:00
       </span>
       <Cart/>
      <CartButton/>

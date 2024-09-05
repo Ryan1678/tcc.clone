@@ -18,7 +18,7 @@ export const Menu = () => {
         <Loading />
       ) : (
         <div className='menu mb-10 w-full'>
-          <h2 className='text-center font-bold mb-5 mt-5 text-2xl'>{select ? `Cardapio de ${select}` : 'Nossos melhores lanches'}</h2>
+          <h2 className='text-center font-bold mb-5 mt-5 text-2xl'>{select ? `Cardapio de ${select}` : 'Mais vendidos'}</h2>
           <div className='px-4 flex-col gap-10 mb-20 grid grid-cols-1 md:grid-cols-2 w-full'>
             {filteredProducts.map((product) => (
               <Products key={product.id} data={product} />
