@@ -29,7 +29,7 @@
 .pizza, 
 .hamburguer,
 .hotdog{
-    color: red;
+    color: rgb(255, 0, 179);
     font-size: 2rem;
 }
 

@@ -9,12 +9,12 @@
     position: fixed;
     right: 10px;
     top: 10px;
-    color: red;
+    color: rgb(255, 0, 179);
     z-index: 999;
   }
   
   .cart-status {
-    background-color: red;
+    background-color: rgb(255, 0, 179);
     width: 15px;
     height: 15px;
     position: absolute;
