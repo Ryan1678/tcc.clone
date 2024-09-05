@@ -1,40 +1,40 @@
 [
     {
       "id": 11,
-      "name": "Cheese Burger Duplo",
-      "size": "grande",
+      "name": "Cheetos QUeijo 60g",
+      "size": "32g",
       "description": "Pão carne de hamburguer, calabresa, mussarela, ovo,alface, requeijão, milho e maionese ",
-      "price": 20.9,
+      "price": 5.99,
       "type": "hamburguer",
       "image": "1717300670748.png",
       "imageUrl":"http://localhost:4004/uploads/1718733216589.png"
     },
     {
       "id": 12,
-      "name": "X-Tudo",
-      "size": "grande",
+      "name": "Doritos 32g",
+      "size": "32g",
       "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      "price": 12.9,
+      "price": 3.99,
       "type": "hamburguer",
       "image": "1717301125123.png",
       "imageUrl": "http://localhost:4004/uploads/1718732565238.png"
     },
     {
       "id": 13,
-      "name": "Catupiry",
+      "name": "Picole de Morango",
       "size": "grande",
       "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      "price": 26.9,
+      "price": 2.00,
       "type": "pizza",
       "image": "hamb-2.png",
       "imageUrl":"http://localhost:4004/uploads/1718733585818.jpeg"
     },
     {
       "id": 14,
-      "name": "Hotdog - Tradicional",
-      "size": "grande",
+      "name": "Refri Fanta Uva 350ml",
+      "size": "350ml",
       "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      "price": 12.5,
+      "price": 3.50,
       "type": "hotdog",
       "image": "1717452461108.jpeg",
       "imageUrl": "http://localhost:4004/uploads/1718732917539.jpeg"
