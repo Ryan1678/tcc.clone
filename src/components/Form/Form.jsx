@@ -12,7 +12,7 @@ export const Form = () => {
   const [address, setAddress] = useState("");
   const { cartItems, loading, setLoading, isOpen } = useContext(Context);
 
-  const notifySuccess = () => toast.success('Pedido enviado!', {
+  const notifySuccess = () => toast.success('Pedido enviado! Informe seu RM para retirada do produto!!', {
     position: "top-left",
     autoClose: 5000,
     hideProgressBar: false,
@@ -44,31 +44,6 @@ export const Form = () => {
       return;
     }
   }
-
-  const handleCepChange = async (e) => {
-    const cep = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
-    if (cep.length > 8) {
-      e.target.value = cep.slice(0, 8);
-      return;
-    }
-    if (cep.length === 8) {
-      try {
-        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const data = await response.json();
-        if (data.erro) {
-          notifyError('Cep inválido!');
-          setAddress("");
-        } else {
-          setAddress(data.logradouro, data.uf);
-        }
-      } catch (error) {
-        notifyError('Cep invalido!');
-        setAddress("");
-      }
-    } else {
-      setAddress("");
-    }
-  };
 
   const onSubmit = async (data) => {
     if(!isOpen){
@@ -129,15 +104,15 @@ export const Form = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full gap-4 mt-5 mb-1 px-4">
             <h1 className="text-center text-3xl font-bold">Enviar seu <span className="text-red-600">pedido</span></h1>
             <input
-              {...register("name", { required: true })}
+              {...register("nome", { required: true })}
               placeholder="Nome"
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
             {errors.name && <span className="text-red-600">O nome não pode estar vazio</span>}
             <input
-              type="tel"
-              {...register("phone", { required: true, pattern: /^[0-9]{11}$/ })}
-              placeholder="Telefone"
+              type="rm"
+              {...register("rm", { required: true, pattern: /^[0-9]{5}$/ })}
+              placeholder="RM"
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
               onChange={handlePhoneChange}
             />
@@ -145,30 +120,15 @@ export const Form = () => {
             <input
               type="email"
               {...register("email", { required: true })}
-              placeholder="Email"
+              placeholder="Email (Escolar/Pessoal)"
               className="bg-white-200 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
             {errors.email && <span className="text-red-600">Email inválido!</span>}
             <input
-              type="number"
-              {...register("cep", { required: true, pattern: /^[0-9]{8}$/ })}
-              placeholder="Cep"
-              className="bg-white-200 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
-              onChange={handleCepChange}
-            />
-            {errors.cep && <span className="text-red-600">Cep inválido</span>}
-            <input
               type="text"
-              value={address}
-              placeholder="Endereço"
+              {...register("unidade_escolar")}
+              placeholder="Unidade Escolar"
               className="bg-white-200 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
-              readOnly
-            />
-            <input
-              type="text"
-              {...register("home", { required: true })}
-              placeholder="Casa/Apartamento"
-              className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
             {errors.home && <span className="text-red-600">Este campo é obrigatório</span>}
             <textarea
