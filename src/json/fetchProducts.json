@@ -1,11 +1,11 @@
 [
     {
       "id": 11,
-      "name": "Cheetos QUeijo 60g",
+      "name": "Cheetos Queijo 60g",
       "size": "32g",
-      "description": "Pão carne de hamburguer, calabresa, mussarela, ovo,alface, requeijão, milho e maionese ",
+      "description": "Salgadinho assado a base de milho sabor queijo cheetos.",
       "price": 5.99,
-      "type": "hamburguer",
+      "type": "pizza",
       "image": "1717300670748.png",
       "imageUrl":"http://localhost:4004/uploads/1718733216589.png"
     },
@@ -13,9 +13,9 @@
       "id": 12,
       "name": "Doritos 32g",
       "size": "32g",
-      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "description": "Salgadinho assado a base de milho sabor queijo cheddar.",
       "price": 3.99,
-      "type": "hamburguer",
+      "type": "pizza",
       "image": "1717301125123.png",
       "imageUrl": "http://localhost:4004/uploads/1718732565238.png"
     },
@@ -23,9 +23,19 @@
       "id": 13,
       "name": "Picole de Morango",
       "size": "grande",
-      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "description": "Sobremesa congelada a base de leite sabor morango.",
       "price": 2.00,
-      "type": "pizza",
+      "type": "hotdog",
+      "image": "hamb-2.png",
+      "imageUrl":"http://localhost:4004/uploads/1718733585818.jpeg"
+    },
+    {
+      "id": 13,
+      "name": "Fini Minhocas",
+      "size": "grande",
+      "description": "Bala de gomas com sabores diversos sabores sortidos.",
+      "price": 3.50,
+      "type": "hotdog",
       "image": "hamb-2.png",
       "imageUrl":"http://localhost:4004/uploads/1718733585818.jpeg"
     },
@@ -33,11 +43,22 @@
       "id": 14,
       "name": "Refri Fanta Uva 350ml",
       "size": "350ml",
-      "description": "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      "description": "Bebida de água gaseificada saborizada e aromatizada sabor uva. ",
       "price": 3.50,
-      "type": "hotdog",
+      "type": "hamburguer",
+      "image": "1717452461108.jpeg",
+      "imageUrl": "http://localhost:4004/uploads/1718732917539.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Coca-Cola 350ml",
+      "size": "350ml",
+      "description": "Bebida de água gaseificada saborizada e aromatizada sabor cola. ",
+      "price": 3.50,
+      "type": "hamburguer",
       "image": "1717452461108.jpeg",
       "imageUrl": "http://localhost:4004/uploads/1718732917539.jpeg"
     }
+    
   ]
   
