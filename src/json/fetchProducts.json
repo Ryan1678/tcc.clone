@@ -1,3 +1,4 @@
+
 [
     {
       "id": 11,
@@ -6,8 +7,8 @@
       "description": "Salgadinho assado a base de milho sabor queijo cheetos.",
       "price": 5.99,
       "type": "pizza",
-      "image": "1717300670748.png",
-      "imageUrl":"http://localhost:4004/uploads/1718733216589.png"
+      "image": "14887_1.jpeg",
+      "imageUrl":"https://chocosul.agilecdn.com.br/14887_1.jpg"
     },
     {
       "id": 12,
@@ -16,8 +17,8 @@
       "description": "Salgadinho assado a base de milho sabor queijo cheddar.",
       "price": 3.99,
       "type": "pizza",
-      "image": "1717301125123.png",
-      "imageUrl": "http://localhost:4004/uploads/1718732565238.png"
+      "image": "doritos.jpeg",
+      "imageUrl": "https://plataforma.supersimple.com.ar/Panelcontenidos/Contenidos/Doritos-sabor-queso-x-85-grs-1621005155-0-1.jpg"
     },
     {
       "id": 13,
@@ -36,8 +37,8 @@
       "description": "Bala de gomas com sabores diversos sabores sortidos.",
       "price": 3.50,
       "type": "hotdog",
-      "image": "hamb-2.png",
-      "imageUrl":"http://localhost:4004/uploads/1718733585818.jpeg"
+      "image": "fini.jpeg",
+      "imageUrl":"https://doceriapaodemel.com.br/wp-content/uploads/2023/09/Fini-250g-Minhoca-Citrica-11.9.jpg"
     },
     {
       "id": 14,
