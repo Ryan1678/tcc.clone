@@ -9,9 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Confirm } from '../../Pages/Form';
 import { Error } from '../../Pages/Error';
 
+
 export const Main = () => {
-
-
 
   return (
     <main className='flex flex-col justify-center items-center'>
@@ -20,7 +19,7 @@ export const Main = () => {
             <Route path='/' exact element={<Home />} />
             <Route path='/pizza' element={<Pizzas />} />
             <Route path='/hamburguer' element={<Hamburgueres />} />
-            <Route path='/hotdog' element={<Hotdogs />} />
+            <Route path='/hotdog' element={<Hotdogs/>} />
             <Route path='/formulario' element={<Confirm />} />
             <Route path='*' element={<Error/>}/>
           </Routes>

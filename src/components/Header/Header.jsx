@@ -1,5 +1,5 @@
 import  { useContext, useEffect } from 'react';
-import Logo from '../../assets/hamb-1-removebg-preview.png';
+import Logo from '../../assets/hamb-1-removebg.png';
 import './Header.css';
 import { Context } from '../context/Provider';
 import { Cart } from '../cart/Cart';
