@@ -27,8 +27,8 @@
       "description": "Sobremesa congelada a base de leite sabor morango.",
       "price": 2.00,
       "type": "hotdog",
-      "image": "hamb-2.png",
-      "imageUrl":"http://localhost:4004/uploads/1718733585818.jpeg"
+      "image": "sorvete.jpeg",
+      "imageUrl":"https://clubedosorvete.vteximg.com.br/arquivos/ids/157644/La-Frutta_Morango_picole_2022_04_1000px.png?v=638187275961570000"
     },
     {
       "id": 13,
@@ -47,8 +47,8 @@
       "description": "Bebida de água gaseificada saborizada e aromatizada sabor uva. ",
       "price": 3.50,
       "type": "hamburguer",
-      "image": "1717452461108.jpeg",
-      "imageUrl": "http://localhost:4004/uploads/1718732917539.jpeg"
+      "image": "fanta.jpeg",
+      "imageUrl": "https://tfcfq5.vteximg.com.br/arquivos/ids/156806-0-0/Refrigerante-Fanta-Uva-250ml.jpg?v=637574848091800000"
     },
     {
       "id": 14,
@@ -57,8 +57,8 @@
       "description": "Bebida de água gaseificada saborizada e aromatizada sabor cola. ",
       "price": 3.50,
       "type": "hamburguer",
-      "image": "1717452461108.jpeg",
-      "imageUrl": "http://localhost:4004/uploads/1718732917539.jpeg"
+      "image": "coca.jpeg",
+      "imageUrl": "https://naturaldaterra.com.br/media/catalog/product/cache/90a67334732b2408839e146d4f241496/1/2/121336.png"
     }
     
   ]
