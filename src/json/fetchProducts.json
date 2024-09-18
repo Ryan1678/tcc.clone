@@ -6,7 +6,7 @@
       "size": "32g",
       "description": "Salgadinho assado a base de milho sabor queijo cheetos.",
       "price": 4.99,
-      "type": "pizza",
+      "type": "salgados",
       "image": "14887_1.jpeg",
       "imageUrl":"https://chocosul.agilecdn.com.br/14887_1.jpg"
     },
@@ -16,7 +16,7 @@
       "size": "32g",
       "description": "Salgadinho assado a base de milho sabor queijo cheddar.",
       "price": 6.99,
-      "type": "pizza",
+      "type": "salgados",
       "image": "doritos.jpeg",
       "imageUrl": "https://plataforma.supersimple.com.ar/Panelcontenidos/Contenidos/Doritos-sabor-queso-x-85-grs-1621005155-0-1.jpg"
     },
@@ -26,7 +26,7 @@
       "size": "30g",
       "description": "Salgadinho assado sabor picante e marcante.",
       "price": 3.00,
-      "type": "pizza",
+      "type": "salgados",
       "image": "torcida.jpeg",
       "imageUrl": "https://destro.fbitsstatic.net/img/p/salgadinho-torcida-pimenta-mexicana-38g-84840/271397.jpg?w=500&h=500&v=202409030821&qs=ignore"
     },
@@ -36,7 +36,7 @@
       "size": "32g",
       "description": "Salgadinho batata chips feita de batata de verdade, com muita crocância e sabor. ",
       "price": 6.00,
-      "type": "pizza",
+      "type": "salgados",
       "image": "ruffles.jpeg",
       "imageUrl": "https://docemalu.vtexassets.com/arquivos/ids/5347872-800-auto?v=638421925060300000&width=800&height=auto&aspect=true"
     },
@@ -46,7 +46,7 @@
       "size": "grande",
       "description": "Sobremesa congelada a base de leite sabor morango.",
       "price": 2.00,
-      "type": "hotdog",
+      "type": "doces",
       "image": "sorvete.jpeg",
       "imageUrl":"https://clubedosorvete.vteximg.com.br/arquivos/ids/157644/La-Frutta_Morango_picole_2022_04_1000px.png?v=638187275961570000"
     },
@@ -56,7 +56,7 @@
       "size": "grande",
       "description": "Bala de gomas com sabores diversos sabores sortidos.",
       "price": 7.40,
-      "type": "hotdog",
+      "type": "doces",
       "image": "fini.jpeg",
       "imageUrl":"https://doceriapaodemel.com.br/wp-content/uploads/2023/09/Fini-250g-Minhoca-Citrica-11.9.jpg"
     },
@@ -66,7 +66,7 @@
       "size": "grande",
       "description": "Chiclete de bola com recheio líquido, sabor artificial de morango.",
       "price": 0.50,
-      "type": "hotdog",
+      "type": "doces",
       "image": "chiclete.jpeg",
       "imageUrl":"https://docemalu.vtexassets.com/arquivos/ids/5355930-800-auto?v=638574361887070000&width=800&height=auto&aspect=true"
     },
@@ -76,7 +76,7 @@
       "size": "grande",
       "description": "wafer super crocante, recheado com sabor chocolate e coberto com chocolate ao leite 38% de cacau.",
       "price": 3.00,
-      "type": "hotdog",
+      "type": "doces",
       "image": "trento.jpeg",
       "imageUrl":"https://destro.fbitsstatic.net/img/p/trento-chocolate-ao-leite-32g-72244/258780.jpg?w=500&h=500&v=no-change&qs=ignore"
     },
@@ -87,7 +87,7 @@
       "size": "350ml",
       "description": "Bebida de água gaseificada saborizada e aromatizada sabor uva. ",
       "price": 2.75,
-      "type": "hamburguer",
+      "type": "bebidas",
       "image": "fanta.jpeg",
       "imageUrl": "https://tfcfq5.vteximg.com.br/arquivos/ids/156806-0-0/Refrigerante-Fanta-Uva-250ml.jpg?v=637574848091800000"
     },
@@ -97,7 +97,7 @@
       "size": "350ml",
       "description": "Bebida de água gaseificada saborizada e aromatizada sabor cola. ",
       "price": 3.50,
-      "type": "hamburguer",
+      "type": "bebidas",
       "image": "coca.jpeg",
       "imageUrl": "https://naturaldaterra.com.br/media/catalog/product/cache/90a67334732b2408839e146d4f241496/1/2/121336.png"
     },
@@ -107,7 +107,7 @@
       "size": "350ml",
       "description": "Bebida de água gaseificada saborizada e aromatizada sabor Laranja. ",
       "price": 2.75,
-      "type": "hamburguer",
+      "type": "bebidas",
       "image": "Fanta.jpeg",
       "imageUrl": "https://images.tcdn.com.br/img/img_prod/1115696/fanta_laranja_pet_200ml_12_und_43_1_e69c7fcccc4b5847e5a9c43b6daeee89.jpg"
     },
@@ -117,7 +117,7 @@
     "size": "350ml",
     "description": "Bebida de água gaseificada saborizada e aromatizada sabor Guaraná. ",
     "price": 2.50,
-    "type": "hamburguer",
+    "type": "bebidas",
     "image": "Dolly.jpeg",
     "imageUrl": "https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1359.jpg"
   }

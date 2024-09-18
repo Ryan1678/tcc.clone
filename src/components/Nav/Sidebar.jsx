@@ -16,15 +16,15 @@ export const Sidebar = () => {
                <FaHome/> 
           </NavButtons>
 
-          <NavButtons link={'/pizza'} className={`${select === 'pizza' ? 'select' : ''} pizza`} title={'pizza'}>
+          <NavButtons link={'/pizza'} className={`${select === 'salgados' ? 'select' : ''} pizza`} title={'salgados'}>
               <GiChipsBag /> 
           </NavButtons>
 
-          <NavButtons link={'/hotdog'} className={`${select === 'hotdog' ? 'select' : ''} hotdog`} title={'hotdog'}>
+          <NavButtons link={'/hotdog'} className={`${select === 'doces' ? 'select' : ''} hotdog`} title={'doces'}>
                   <LuCandy />
           </NavButtons>
 
-          <NavButtons link={'/hamburguer'} className={`${select === 'hamburguer' ? 'select' : ''} hamburguer` } title={'hamburguer'}>
+          <NavButtons link={'/hamburguer'} className={`${select === 'bebidas' ? 'select' : ''} hamburguer` } title={'bebidas'}>
                <RiDrinks2Fill />
           </NavButtons>
 
