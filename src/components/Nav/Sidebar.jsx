@@ -1,7 +1,7 @@
 import { NavButtons } from "../NavButtons/NavButtons"
-import { CiPizza } from "react-icons/ci";
-import { CiHotdog } from "react-icons/ci";
-import { FaHamburger } from "react-icons/fa";
+import { GiChipsBag } from "react-icons/gi";
+import { LuCandy } from "react-icons/lu";
+import { RiDrinks2Fill } from "react-icons/ri";
 import './Sidebar.css'
 import { useContext } from "react";
 import { Context } from "../context/Provider";
@@ -17,15 +17,15 @@ export const Sidebar = () => {
           </NavButtons>
 
           <NavButtons link={'/pizza'} className={`${select === 'pizza' ? 'select' : ''} pizza`} title={'pizza'}>
-               <CiPizza/> 
+              <GiChipsBag /> 
           </NavButtons>
 
           <NavButtons link={'/hotdog'} className={`${select === 'hotdog' ? 'select' : ''} hotdog`} title={'hotdog'}>
-               <CiHotdog/> 
+                  <LuCandy />
           </NavButtons>
 
           <NavButtons link={'/hamburguer'} className={`${select === 'hamburguer' ? 'select' : ''} hamburguer` } title={'hamburguer'}>
-               <FaHamburger/>
+               <RiDrinks2Fill />
           </NavButtons>
 
     </nav>
