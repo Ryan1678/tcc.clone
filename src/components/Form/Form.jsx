@@ -51,7 +51,7 @@ export const Form = () => {
       total: cartItems.reduce((acc, item) => acc + (item.price * item.qualify), 0).toFixed(2),
       payment_method: paymentMethod,
       purchase_code: purchaseCode,
-      message: "Dirija-se ao balcão da lanchonete e informe o código da compra para pegar seu pedido."
+      message: "Dirija-se ao balcão da lanchonete e informe o código da compra para pegar seu pedido.",
     };
 
     try {
