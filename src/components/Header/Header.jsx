@@ -35,7 +35,7 @@ export const Header = () => {
       <img src={Logo} alt="Logo" />
       <h2>Lanchonete Escolar</h2>
       
-      <p>ITB Brasilío Flores de Azevedo</p>
+      <p>Instituto de Educação de Barueri</p>
       <span className={`restaurant ${isOpen ? 'open' : 'closed'}`}>
         Seg á Sex - 07:00 as 22:00
       </span>
