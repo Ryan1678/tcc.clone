@@ -6,13 +6,16 @@ import { Context } from "../context/Provider";
 import Loading from "../Loading/Loading";
 import { CiLogout } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import emailjs from 'emailjs-com';
+
+emailjs.init("y99EZ8SnpoZVsTjGn"); 
 
 export const Form = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [address, setAddress] = useState("");
   const { cartItems, loading, setLoading, isOpen } = useContext(Context);
 
-  const notifySuccess = () => toast.success('Pedido enviado! Informe seu RM para retirada do produto!!', {
+  const notifySuccess = () => toast.success('Pedido enviado! Verifique seu Email.', {
     position: "top-left",
     autoClose: 5000,
     hideProgressBar: false,
@@ -38,16 +41,31 @@ export const Form = () => {
 
   const handlePhoneChange = (e) => {
     const phone = e.target.value.replace(/\D/g, '');
-
-    if(phone.length > 12){
-      e.target.value = phone.slice(0,11);
-      return;
+    if (phone.length > 11) {
+      e.target.value = phone.slice(0, 11);
     }
-  }
+  };
+
+  const sendEmail = async (data) => {
+    const templateParams = {
+      to_name: data.nome,
+      to_email: data.email,
+      total: cartItems.reduce((acc, item) => acc + (item.price * item.qualify), 0).toFixed(2),
+      message: "Por favor, acesse o site para finalizar o pagamento.",
+    };
+
+    try {
+      await emailjs.send('service_z74uxl4', 'template_28vxj6g', templateParams, 'y99EZ8SnpoZVsTjGn');
+      console.log('Email enviado com sucesso!');
+    } catch (error) {
+      console.error('Erro ao enviar o email:', error);
+      notifyError('Erro ao enviar e-mail.');
+    }
+  };
 
   const onSubmit = async (data) => {
-    if(!isOpen){
-      notifyError('Ops! O restaurante está fechado');
+    if (!isOpen) {
+      notifyError('Ops! A Escola está fechada');
       return;
     }
 
@@ -56,37 +74,14 @@ export const Form = () => {
       return;
     }
 
-    const total = cartItems.reduce((acc, item) =>  acc + (item.price * item.qualify),0);
-
-    const pedidoData = {
-      name: data.name,
-      message: data.message,
-      home: data.home,
-      address: address,
-      total: total.toFixed(2), // Garante que seja um número com duas casas decimais
-      cart: cartItems,
-      number: data.phone
-    };
-
+    setLoading(true);
     try {
-      setLoading(true);
-      const response = await fetch('http://localhost:3000/enviar-pedido-whatsapp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(pedidoData),
-      });
-
-      if (response.ok) {
-        notifySuccess();
-        reset(); // Limpa os campos do formulário
-        cartItems.length = 0
-      } else {
-        notifyError('Erro ao enviar pedido');
-      }
+      await sendEmail(data); // Aguarda o envio do e-mail
+      notifySuccess(); // Notifica o sucesso após o envio
+      reset(); // Limpa os campos do formulário
+      cartItems.length = 0; // Limpa o carrinho
     } catch (error) {
-      notifyError('Ops algo não deu certo!');
+      notifyError('Erro ao enviar o pedido.');
     } finally {
       setLoading(false); // Define o estado de carregamento para false
     }
@@ -94,12 +89,12 @@ export const Form = () => {
 
   return (
     <>
-      {loading ? (<Loading/>) : (
+      {loading ? (<Loading />) : (
         <div className="w-full">
           <div className="bg-white w-full text-red-600 py-2 px-2 text-4xl">
-           <Link to={'/'}>
-              <CiLogout/>
-           </Link>
+            <Link to={'/'}>
+              <CiLogout />
+            </Link>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full gap-4 mt-5 mb-1 px-4">
             <h1 className="text-center text-3xl font-bold">Enviar seu <span className="text-red-600">pedido</span></h1>
@@ -108,15 +103,15 @@ export const Form = () => {
               placeholder="Nome"
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
-            {errors.name && <span className="text-red-600">O nome não pode estar vazio</span>}
+            {errors.nome && <span className="text-red-600">O nome não pode estar vazio</span>}
             <input
-              type="rm"
+              type="text"
               {...register("rm", { required: true, pattern: /^[0-9]{5}$/ })}
               placeholder="RM"
               className="bg-white-100 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
               onChange={handlePhoneChange}
             />
-            {errors.phone && <span className="text-red-600">O número é inválido!</span>}
+            {errors.rm && <span className="text-red-600">O RM é inválido!</span>}
             <input
               type="email"
               {...register("email", { required: true })}
@@ -126,11 +121,11 @@ export const Form = () => {
             {errors.email && <span className="text-red-600">Email inválido!</span>}
             <input
               type="text"
-              {...register("unidade_escolar")}
+              {...register("unidade_escolar", { required: true })}
               placeholder="Unidade Escolar"
               className="bg-white-200 px-4 py-4 outline-none placeholder:font-bold border border-black/35 rounded focus:border-green-500"
             />
-            {errors.home && <span className="text-red-600">Este campo é obrigatório</span>}
+            {errors.unidade_escolar && <span className="text-red-600">Este campo é obrigatório</span>}
             <textarea
               {...register("message")}
               placeholder="Mensagem (opcional)"
@@ -139,9 +134,7 @@ export const Form = () => {
             <button className="border py-3 bg-green-500 text-white font-bold text-2xl">Fazer pedido</button>
           </form>
         </div>
-           
       )}
     </>
-
   );
-}
+};

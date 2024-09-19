@@ -3,6 +3,8 @@ import { useContext } from 'react'
 import { Form } from '../components/Form/Form'
 import { Context } from '../components/context/Provider'
 import { AlertCard } from '../components/AlertCard/AlertCard'
+import emailjs from 'emailjs-com';
+
 export const Confirm = () => {
 
   const {cartItems} = useContext(Context)

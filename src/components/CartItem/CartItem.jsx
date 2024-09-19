@@ -27,13 +27,11 @@ export const CartItem = ({ data }) => {
   const handleRemove = () => {
     if (existingItem) {
       if (existingItem.qualify > 1) {
-        // Decrementa a quantidade do item
         const updatedItems = cartItems.map(item =>
           item.name === name ? { ...item, qualify: item.qualify - 1 } : item
         );
         setCartItems(updatedItems);
       } else {
-        // Remove o item do carrinho
         const updatedItems = cartItems.filter(item => item.name !== name);
         setCartItems(updatedItems);
         notify()
