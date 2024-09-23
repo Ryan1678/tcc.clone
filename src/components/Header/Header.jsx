@@ -4,6 +4,7 @@ import './Header.css';
 import { Context } from '../context/Provider';
 import { Cart } from '../cart/Cart';
 import { CartButton } from '../CartButton/CardButton';
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const {isOpen, setIsOpen} = useContext(Context);
@@ -43,6 +44,9 @@ export const Header = () => {
      <CartButton/>
     </header>
   );
-};
+  
+}
+
+
 
 
